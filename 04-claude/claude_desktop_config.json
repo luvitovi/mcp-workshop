@@ -1,0 +1,13 @@
+{
+  "preferences": {
+    "quickEntryShortcut": "off"
+  },
+  "mcpServers": {
+    "document-search": {
+      "command": "/Users/informatica/.pyenv/shims/python",
+      "args": [
+        "/Users/informatica/desarrollo/git/UPSE/charla_mcp/03-mcp-server/mcp-server.py"
+      ]
+    }
+  }
+}

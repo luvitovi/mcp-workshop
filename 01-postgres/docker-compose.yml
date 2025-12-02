@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16 # Use the pgvector image
+    environment:
+      POSTGRES_DB: dbtest
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: demo@acme.com
+      PGADMIN_DEFAULT_PASSWORD: demo
+    ports:
+      - "8080:80" # Access pgAdmin on port 8080
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:
+
